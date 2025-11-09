@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TypeScript Проект - Сучасний веб-додаток">
+    <title>TypeScript Проект</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1>TypeScript Project</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Головна</a></li>
+                    <li><a href="#about">Про нас</a></li>
+                    <li><a href="#features">Можливості</a></li>
+                    <li><a href="#posts">Пости</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">Ласкаво просимо до TypeScript Проекту</h2>
+                    <p class="hero-subtitle">Сучасний та ефективний розв'язок для ваших потреб</p>
+                    <div class="hero-buttons">
+                        <a href="#features" class="btn btn-primary">Дізнатися більше</a>
+                        <a href="#contact" class="btn btn-secondary">Зв'язатися з нами</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">Про проект</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Цей проект створений з використанням сучасних технологій та best practices для забезпечення високої якості коду та продуктивності.</p>
+                        <p>TypeScript надає нам можливість створювати масштабовані та надійні додатки з типобезпекою.</p>
+                    </div>
+                    <div class="about-image">
+                        <div class="placeholder-box">
+                            <span>🚀</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">Можливості</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Швидкість</h3>
+                        <p>Оптимізований код для максимальної продуктивності</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Безпека</h3>
+                        <p>Типобезпека TypeScript забезпечує надійність</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📦</div>
+                        <h3>Масштабованість</h3>
+                        <p>Архітектура, готова до росту проекту</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛠️</div>
+                        <h3>Інструменти</h3>
+                        <p>Сучасні інструменти розробки та тестування</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="posts" class="posts">
+            <div class="container">
+                <h2 class="section-title">Останні пости</h2>
+                <div id="loading" class="loading" style="display: none;">
+                    <p>Завантаження даних...</p>
+                </div>
+                <div id="posts-container" class="posts-grid">
+                    <!-- Пости будуть додані через JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Зв'яжіться з нами</h2>
+                <div class="contact-content">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Ім'я</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Повідомлення</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Відправити</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 TypeScript Проект. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <!-- Модальне вікно -->
+    <div id="modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h2 class="modal-title"></h2>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Підключення скомпільованого TypeScript файлу -->
+    <script src="dist/app.js"></script>
+</body>
+</html>
+
