@@ -30,11 +30,19 @@ jobs:
       - name: Build TypeScript
         run: npm run build
 
+      - name: Prepare deployment files
+        run: |
+          mkdir -p deploy
+          cp index.html deploy/
+          cp styles.css deploy/
+          cp -r dist deploy/
+          cp README.md deploy/ 2>/dev/null || true
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: ./deploy
           publish_branch: gh-pages
           force_orphan: true
           user_name: 'github-actions[bot]'
